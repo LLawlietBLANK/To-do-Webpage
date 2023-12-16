@@ -1,0 +1,198 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(image1.jpg) no-repeat center fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.note-section, .todo-section {
+  background: transparent;
+  backdrop-filter :  blur(10px); 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 10px #212147;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+
+#note-list {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+#heading{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.0rem;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: hsl(191, 78%, 7%);
+}
+
+#noteTitle {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#noteInput{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0px 10px 5px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  height: 200px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#imageInput{
+ margin: 10px 0px 10px 0px;
+ font-size: larger;
+ font-family: 'Poppins', sans-serif;
+ color: #fff;
+}
+
+#addnotes{
+  width: 50%;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #179ab5;
+  color: #000;
+  font-weight: 600;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+}
+#btnDiv{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.toggle-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f5f5f5;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(175, 92, 143);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+
+}
+
+input:checked + .slider {
+  background-color: #3e34ab;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background: white;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  background-image: url('image2.jpg');/* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Center the background image */
+  /* Additional dark mode styles */
+}
+
+.credits {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: #999; /* Adjust the color as needed */
+  font-size: 12px; /* Adjust the font size */
+}
